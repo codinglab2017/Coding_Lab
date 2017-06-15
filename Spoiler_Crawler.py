@@ -13,7 +13,7 @@ class Crawler(object):
     def get_stock_price(stock):
         """ This takes a stock and returns the price of today """
         stock = yahoo_finance.Share(stock)
-        return stock.get_price()
+        return float(stock.get_price())
     
     def get_prices(self):
         """ Returns a dict of all stocks and their prices """
